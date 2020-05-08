@@ -7,7 +7,10 @@
 .fighter-preview___right {
   align-items: flex-end;
 }
-
+.fighter-preview___right img {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
 .fighter-preview___left {
   align-items: flex-start;
 }
