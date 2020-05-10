@@ -25,7 +25,7 @@ const capitalizeWord = (s) => {
 }
 
 
-function createFighterInfo (fighter) {
+export function createFighterInfo (fighter) {
   const list = createElement({
     tagName: "ul",
     className: "info-block"
@@ -44,12 +44,13 @@ function createFighterInfo (fighter) {
       tagName: "span"
     });
 
+    
     if (key !== "source" && key !== "_id") {
       title.innerText = capitalizeWord(key);
       val.innerText = value;
 
-      itemList.appendChild(title, val);
-      list.appendChild(itemList);
+      itemList.append(title, val);
+      list.append(itemList);
     }
   }
   return list;

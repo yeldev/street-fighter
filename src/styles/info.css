@@ -4,8 +4,10 @@
   margin: 0;
   padding: 0;
   border-radius: 5px;
-  width: 250px;
+  min-width: 250px;
+  max-width: 100%;
   margin-top: 10px;
+  border: 4px solid #07586ebd;
 }
 
 .info-block__item {
@@ -13,11 +15,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.info-block__item {
   font-family: sans-serif;
   font-size: 16px;
   color: #fff;
   font-weight: 600;
+}
+
+.info-block__item:hover {
+  cursor: pointer;
+  background-color: rgba(10, 134, 41, 0.849);
 }

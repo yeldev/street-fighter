@@ -23,16 +23,13 @@ export async function getFighterInfo(fighterId) {
   try {
     if(!fightersDetailsMap.has(fighterId)) {
       const fighterInfo = await fighterService.getFighterDetails(fighterId);
-      // send request here
       fightersDetailsMap.set(fighterId, fighterInfo);
     }
     
     return fightersDetailsMap.get(fighterId);
   } catch (error) {
-    console.log(error)
     throw new Error("Failed to select");
   }
-  // get fighter info from fighterDetailsMap or from service and write it to fighterDetailsMap
 }
 
 function renderSelectedFighters(selectedFighters) {
