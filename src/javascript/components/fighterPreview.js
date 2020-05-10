@@ -48,7 +48,7 @@ function createFighterInfo (fighter) {
       title.innerText = capitalizeWord(key);
       val.innerText = value;
 
-      itemList.append(title, val);
+      itemList.appendChild(title, val);
       list.appendChild(itemList);
     }
   }
